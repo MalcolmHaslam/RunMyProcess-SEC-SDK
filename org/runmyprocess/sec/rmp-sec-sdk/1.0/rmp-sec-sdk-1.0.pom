@@ -26,7 +26,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.runmyprocess.sec</groupId>
+    <groupId>org.runmyprocess.sec</groupId>
     <artifactId>rmp-sec-sdk</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
@@ -48,9 +48,21 @@
         <dependency>
             <groupId>org.runmyprocess</groupId>
             <artifactId>json</artifactId>
-            <version>1.6.4</version>
+            <version>1.7.9</version>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>json-mvn-repo</id>
+            <url>https://raw.github.com/runmyprocess/json/mvn-repo/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <distributionManagement>
 	<repository>
 		<id>internal.repo</id>
@@ -75,9 +87,6 @@
                     <encoding>utf8</encoding>
                 </configuration>
             </plugin>
-
-
-
 
         <plugin>
 		<groupId>com.github.github</groupId>
